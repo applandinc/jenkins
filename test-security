@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -e
+set -x
+
+mvn -o "-Dtest=hudson/security/*, jenkins/security/*" -DfailIfNoTests=false integration-test
+
