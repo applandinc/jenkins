@@ -250,7 +250,7 @@ THE SOFTWARE.
         <artifactId>maven-surefire-plugin</artifactId>
         <!-- version specified in grandparent pom -->
         <configuration>
-          <argLine>${jacocoSurefireArgs} -Dfile.encoding=UTF-8 -Xmx1g -Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+          <argLine>${jacocoSurefireArgs} -javaagent:/Users/kgilpin/source/appland/jenkins/appmap-0.2.0.jar -Dappmap.config.file=/Users/kgilpin/source/appland/jenkins/appmap.yml -Dappmap.output.directory=/Users/kgilpin/source/appland/jenkins/tmp  -Dfile.encoding=UTF-8 -Xmx1g -Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
           <systemPropertyVariables>
               <!-- use AntClassLoader that supports predictable file handle release -->
               <hudson.ClassicPluginStrategy.useAntClassLoader>true</hudson.ClassicPluginStrategy.useAntClassLoader>
